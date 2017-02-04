@@ -1,0 +1,3 @@
+#!/bin/sh
+xrandr --output eDP-1-1 --off
+i3-msg restart
