@@ -19,7 +19,7 @@ Plugin 'vim-scripts/tComment'
 Plugin 'jgdavey/vim-turbux'
 Plugin 'jgdavey/tslime.vim'
 
-" Plugin 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 " Plugin 'lepture/vim-css'
 " Plugin 'lepture/vim-jinja'
 "Plugin 'majutsushi/tagbar'
