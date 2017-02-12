@@ -91,7 +91,8 @@ exec_always --no-startup-id feh --bg-center /home/myared/.config/i3/wallpapers/b
 ################
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec qterminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
