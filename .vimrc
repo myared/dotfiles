@@ -50,6 +50,9 @@ autocmd bufwritepre *.bundles :%s/\s\+$//e
 autocmd bufwritepre *.ex :%s/\s\+$//e
 autocmd bufwritepre *.exs :%s/\s\+$//e
 
+" TODO: Make Javascript pretty
+" autocmd FileType javascript set formatprg=prettier\ --stdin
+
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
@@ -79,7 +82,7 @@ if executable("ag")
 endif
 
 " Ignore folders that I don't want to look into
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp'
 
 " don't just rspec, bundle exec rspec
 " let g:turbux_command_rspec  = 'bundle exec rspec'

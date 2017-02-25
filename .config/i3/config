@@ -91,8 +91,8 @@ exec_always --no-startup-id feh --bg-center /home/myared/.config/i3/wallpapers/b
 ################
 
 # start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec qterminal
+bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec qterminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -200,19 +200,23 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # assign [class="Firefox"] $workspace2
 assign [class="Slack"] $workspace10
 
-# Pulse Audio controls
-# increase sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-
-# decrease sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% 
+# TODO: the sink number changes when switching monitors around
+# pacmd list-sinks  | grep -e 'name:' -e 'index:'
+#
+# increase/decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
 
 # mute sound
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle
 
 # TODO: Screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+# http://ttrmw.co.uk/linux/hardware_button_brightness.html
+#
+# bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+# bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo bright_down
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo bright_up
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
