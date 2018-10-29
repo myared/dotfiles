@@ -36,6 +36,7 @@ Plugin 'Lokaltog/vim-powerline'     " give more info in the status
 Plugin 'airblade/vim-gitgutter'     " show git diff inline
 Plugin 'mustache/vim-mustache-handlebars' " handlebars syntax support
 Plugin 'yegappan/greplace'          " global search and replace
+Plugin 'elixir-lang/vim-elixir'     " elixir yo
 
 " archived
 " Plugin 'mattn/emmet-vim'          " shorthand html/css generation

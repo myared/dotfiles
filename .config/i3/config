@@ -86,6 +86,9 @@ hide_edge_borders both
 # exec --no-startup-id polybar -c /home/myared/.config/i3/polybar/topbar.ini topbar 
 exec_always --no-startup-id feh --bg-center /home/myared/.config/i3/wallpapers/bg.jpg
 
+# prevent touchpad from messing up typing
+exec --no-startup-id /usr/bin/syndaemon -d -K
+
 ################
 # key bindings #
 ################
